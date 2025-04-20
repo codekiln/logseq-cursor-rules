@@ -12,11 +12,12 @@ Youtube video begins with a block like this:
 ```
 	- ## [[Video]]
 		- {{video https://www.youtube.com/watch?v=abcdefghijklmnop}}
+			- NOTES SHOULD GO HERE UNDERNEATH THE VIDEO
 ```
 
 ## Basic Transcript Organization
 
-The transcript should be organized with logical sections and proper hierarchical headings. Each major section should start with a timestamp-based heading. THE HEADINGS MUST BE UNDER THE VIDEO AND INCLUDE TIMESTAMPS for them to be clickable in logseq. Maintain proper logseq-flavored markdown throughout. Use quotes from the transcript and clean up the transcript, attempting to fix spelling or technology names where appropriate. The transcript of youtube videos is done by AI and may contain mistakes. 
+The transcript should be organized with logical sections and proper hierarchical headings. Each major section should start with a timestamp-based heading. THE HEADINGS MUST BE NESTED UNDER THE VIDEO AND INCLUDE TIMESTAMPS for them to be clickable in logseq. Maintain proper logseq-flavored markdown throughout. Use quotes from the transcript and clean up the transcript, attempting to fix spelling or technology names where appropriate. The transcript of youtube videos is done by AI and may contain mistakes. 
 
 ### Heading Structure
 - Use `### {{youtube-timestamp X}}` for main sections
