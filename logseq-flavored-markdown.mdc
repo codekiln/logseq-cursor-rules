@@ -67,12 +67,13 @@ The following example is incorrect because it lacks indentation, unordered list 
 </INCORRECT_❌>
 
 
-### Namespaces
+### Namespaces / Hierarchy
 
 - Logseq supports namespaces using `/` to create hierarchical page structures.
 - Namespaces help organize related content under broader categories.
 - Pages with namespaces are stored as a single file but visually represented as a hierarchy.
 - In the filesystem, Logseq replaces `/` with `___`, storing namespaced pages as single markdown files.
+- It's important that you not invent namespace links that don't already exist, to avoid polluting the knowledge garden with duplicate content.
 
 **Example:**
 
@@ -145,7 +146,7 @@ tags: Q, topicA
 
 
 
-### Fenced Code Blocks Rule (see also [md-fenced-code-blocks.mdc](mdc:.cursor/rules/md-fenced-code-blocks.mdc))
+### Fenced Code Blocks Rule
 
 - When nesting fenced code blocks in markdown, avoid using triple-backticks inside another triple-backtick block.
 - Use triple-backticks for the outer markdown block and triple-tilde (`~~~`) for inner code blocks.
@@ -181,6 +182,3 @@ REMEMBER to use TAB character for identing before the `-`
 	  - 2. do the second thing
 	  - 3. do the third thing
 </CORRECT_✅>
-
-
-
