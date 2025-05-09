@@ -1,0 +1,16 @@
+{
+  "bundles": {
+    "basic-logseq-874": {
+      "name": "basic-logseq",
+      "created": "2025-05-09T15:24:22.940Z",
+      "lastUsed": "2025-05-09T15:24:51.762Z",
+      "tags": [],
+      "files": [
+        "logseq-flavored-markdown.mdc",
+        "logseq-overview.mdc",
+        "logseq-naming-conventions.mdc",
+        "logseq-person.mdc"
+      ]
+    }
+  }
+}
