@@ -7,8 +7,8 @@ alwaysApply: false
 This rule extends `logseq-naming-conventions.mdc` for creating comprehensive AI model documentation pages.
 
 ## When to Use This Rule
-- When creating detailed model documentation
-- When documenting model capabilities and benchmarks
+- When creating detailed model documentation for a specific model version
+- When documenting model capabilities and benchmarks for a particular release
 - When creating model comparison pages
 - When the model is a primary focus of discussion
 - When detailed technical specifications are needed
@@ -20,11 +20,12 @@ This rule extends `logseq-naming-conventions.mdc` for creating comprehensive AI 
 - Look for benchmark results and performance metrics
 - Find pricing and availability information
 - Gather technical specifications
+- Identify the specific model version code (e.g., `gemini-2.5-pro-preview-05-06`)
 
 ### 2. Create Page Structure
 ```markdown
 ---
-alias:: [[model-name]]
+alias:: [[model-code]]
 tags:: [[AI/Model]]
 ---
 
@@ -33,6 +34,7 @@ tags:: [[AI/Model]]
     - List major capabilities and improvements
     - Include context window size
     - Note knowledge cutoff date
+    - Specify model version status (stable/preview/experimental)
   - ## Performance Highlights
     - Include benchmark results
     - Link to benchmark pages
@@ -45,11 +47,13 @@ tags:: [[AI/Model]]
     - API availability
     - Pricing information
     - Usage limitations
+    - Rate limits
   - ## Technical Specifications
     - Model architecture
     - Training data
     - Input/output formats
     - Special capabilities
+    - Model version code
   - ## References
     - Link to official documentation
     - Link to research papers
@@ -74,13 +78,6 @@ tags:: [[AI/Model]]
     - Major improvements in coding, instruction following, and long-context understanding
     - Supports up to 1 million tokens context window
     - Knowledge cutoff: [[2024/06]]
-  - ## Performance Highlights
-    - [[AI Coding]]
-      - 54.6% on [[AI/Benchmark/SWE-Bench/Verified]]
-    - Instruction Following
-      - 38.3% on [[AI/Benchmark/MultiChallenge]]
-    - Long-context
-      - 72% on [[AI/Benchmark/Video-MME/long no subtitles]]
 ```
 </CORRECT_✅>
 
@@ -102,6 +99,10 @@ tags:: [[AI/Model]]
 - Keep pricing and availability information up to date
 - Link to related models and comparisons
 - Follow the singular naming convention from `logseq-naming-conventions.mdc`
+- Use model codes in aliases (e.g., `[[gemini-2.5-pro-preview-05-06]]` instead of `[[Gemini 2.5 Pro Preview 05-06]]`)
+- Always document specific model versions, not model families
+- Include model version status (stable/preview/experimental) in key features
+- Specify rate limits and usage restrictions for preview/experimental models
 
 ## When to Update
 - When new benchmark results are available
@@ -109,6 +110,7 @@ tags:: [[AI/Model]]
 - When new variants are released
 - When official documentation is updated
 - When new capabilities are discovered
+- When model version status changes (e.g., from preview to stable)
 
 ## Related Rules
 - `logseq-ai-model-reference.mdc` - For quick model references
