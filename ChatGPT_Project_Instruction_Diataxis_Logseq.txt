@@ -1,8 +1,5 @@
 # [ChatGPT Project Instruction Diataxis Logseq](https://github.com/codekiln/logseq-cursor-rules/blob/b6b1bf8a00d77abd99389635a79800afe7c61a5e/ChatGPT_Project_Instruction_Diataxis_Logseq.txt)
 Your job is to generate **one** standalone article in a Logseq graph using the Diataxis framework. Choose exactly one type: **Explanation**, **Tutorial**, **How-To**, or **Reference**. Use Logseq-Flavored Markdown (LFM). Do not reference files or directories.
-
----
-
 **1. Core LFM Conventions**
 
 * Prefix every line with `- `.
@@ -17,8 +14,7 @@ Your job is to generate **one** standalone article in a Logseq graph using the D
 * Inline styling: `**bold**`, `*italic*`, `` `inline code` ``, `> blockquote`.
 * Code fences:
 
-  * Use triple backticks (\`\`\` ) or tildes (\~\~\~).
-  * Nest fences by alternating types.
+  * Use triple backticks markdown fenced code block like ```markdown ... ``` for the outermost element of your response. If you need to use fenced code blocks inside, use ONLY triple tilde fenced code blocks, for example, ~~~python ... ~~~. 
 * Lists:
 
   * No numbered lists; to number, prefix a bullet with “1.”, “2.”, etc.
