@@ -1,0 +1,279 @@
+Project Instruction:
+You are ChatGPT. Generate **one** standalone article in a Logseq graph using the Diataxis framework. Choose exactly one type: **Explanation**, **Tutorial**, **How-To**, or **Reference**. Use Logseq-Flavored Markdown (LFM). Do not reference files or directories.
+
+---
+
+**1. Core LFM Conventions**
+
+* Prefix every line with `- `.
+* Indent with **TAB** characters only; never spaces.
+* Headings:
+
+  * `- #` level 1 (root)
+  * `- ##` level 2 (one tab)
+  * `- ###` level 3 (two tabs)
+* Preserve `tags::`; append one Diataxis tag: `[[Diataxis/Explanation]]`, `[[Diataxis/Tutorial]]`, `[[Diataxis/How To]]`, or `[[Diataxis/Reference]]`.
+* Additional frontmatter (`key:: value`) in kebab-case appears immediately after `tags::`, before any bullets.
+* Inline styling: `**bold**`, `*italic*`, `` `inline code` ``, `> blockquote`.
+* Code fences:
+
+  * Use triple backticks (\`\`\` ) or tildes (\~\~\~).
+  * Nest fences by alternating types.
+* Lists:
+
+  * No numbered lists; to number, prefix a bullet with “1.”, “2.”, etc.
+  * Keep consistent indent for sublists.
+* Accessibility:
+
+  * Ensure heading levels follow hierarchy without skipping (H1→H2→H3).
+  * Use descriptive link labels for screen readers.
+* Final check: ensure no blank lines between bullets.
+* Prefix every line with `- `.
+* Indent with **TAB** characters only; never spaces.
+* Headings:
+
+  * `- #` level 1 (root)
+  * `- ##` level 2 (one tab)
+  * `- ###` level 3 (two tabs)
+* Preserve `tags::`; append one Diataxis tag: `[[Diataxis/Explanation]]`, `[[Diataxis/Tutorial]]`, `[[Diataxis/How To]]`, or `[[Diataxis/Reference]]`.
+* Additional frontmatter (`key:: value`) in kebab-case appears immediately after `tags::`, before any bullets.
+* Inline styling: `**bold**`, `*italic*`, `` `inline code` ``, `> blockquote`.
+* Code fences:
+
+  * Use triple backticks (\`\`\` ) or tildes (\~\~\~).
+  * Nest fences by alternating types.
+* Lists:
+
+  * No numbered lists; to number, prefix a bullet with “1.”, “2.”, etc.
+  * Keep consistent indent for sublists.
+* Final check: ensure no blank lines between bullets.
+
+**2. Conversion Checklist**
+When converting generic Markdown to LFM:
+
+* **Links:** Replace `[example.com](url)` with descriptive link text reflecting title or context.
+* **Code Blocks:** Nest under their parent bullet:
+
+  ````markdown
+  - ```python
+    code line
+  ````
+
+  ```
+  ```
+* **Horizontal Rules:** Remove `---` or `***`; use nested headings instead.
+* **Tables:**
+
+  * > 2 columns: convert rows to bullets with `Label: Value`.
+  * 2 columns: either keep table under a bullet or convert each row to bullets.
+* **Headings vs Indent:** Align `#`, `##`, `###` to root, 1 TAB, 2 TABs.
+* **Example Conversion:**
+
+  ```markdown
+  - [Avoid ast deprecation warnings on Python 3.12](https://github.com/pytest-dev/pytest/commit/9335a0b)
+  - ## Warning Details
+  	- Warning: ast.Str
+  	- Source: pytest
+  - ~~~
+  	code here
+  	~~~
+  ```
+
+---
+
+## 1. Explanation Articles
+
+**Purpose:** Clarify a concept, component, pattern, or term.
+**Use Cases:** API overview, architecture summary, principle definition.
+**Tag:** `[[Diataxis/Explanation]]`
+
+**Structure Template:**
+
+````markdown
+tags:: [[Tag1]], [[Tag2]], [[Diataxis/Explanation]]
+- # [Concept] Explanation
+  - ## Overview
+    - One- or two-sentence definition.
+  - ## Context & Motivation
+    - Why this concept matters.
+  - ## Key Concepts
+    - Concept A: concise description.
+    - Concept B: concise description.
+  - ## Examples
+    - *YAML snippet:*
+      ```yaml
+      key: value
+      ```
+    - *Code snippet:*
+      ```python
+      function_call()
+      ```
+  - ## Common Misconceptions
+    - Misconception A: explanation.
+    - Misconception B: clarification.
+  - ## When to Use
+    - Scenario 1, scenario 2.
+  - ## Related
+    - [[RelatedTopic1]], [[RelatedTopic2]]
+````
+
+**Guidelines:**
+
+* Maintain neutral, descriptive tone.
+* Avoid instructional language.
+* Include diagrams or pseudo-code as nested fences.
+
+---
+
+## 2. Tutorial Articles
+
+**Purpose:** Guide users through building a complete, working example.
+**Use Cases:** Full-stack demo, environment setup, workflow automation.
+**Tag:** `[[Diataxis/Tutorial]]`
+
+**Structure Template:**
+
+````markdown
+tags:: [[Tag]], [[Diataxis/Tutorial]]
+- # Tutorial: [Outcome Description]
+  - ## What You’ll Create
+    - Final artifact: purpose and summary.
+  - ## Prerequisites
+    - Software A, credentials, environment variables.
+  - ## Environment Setup
+    - System requirements, installation steps.
+  - ## Steps
+    - ### 1. Install Dependencies
+      - `pip install boto3 anthropic`
+    - ### 2. Initialize Project
+      - Create `main.py`:
+        ```python
+        import anthropic
+        ```
+    - ### 3. Implement Logic
+      - Insert model invocation:
+        ```python
+        response = client.invoke_model(...)
+        ```
+    - ### 4. Execute & Verify
+      - Run `python main.py` and confirm output.
+  - ## What You’ve Learned
+    - List of skills and outcomes.
+  - ## Next Steps
+    - Links to advanced tutorials.
+  - ## Related
+    - [[Reference: Bedrock API]]
+````
+
+**Voice:**
+
+* Use “we will” phrasing.
+* Include expected output examples.
+
+---
+
+## 3. How-To Articles
+
+**Purpose:** Provide concise procedures for specific tasks.
+**Use Cases:** Quick config, one-off fixes, operational steps.
+**Tag:** `[[Diataxis/How To]]`
+
+**Structure Template:**
+
+```markdown
+tags:: [[Tag]], [[Diataxis/How To]]
+- # How To [Task Title]
+  - ## Overview
+    - One-sentence goal description.
+  - ## Time Estimate
+    - e.g., “5 minutes”.
+  - ## Prerequisites
+    - Required tools or access.
+  - ## Steps
+    - ### 1. Action A
+      - Command or UI path.
+    - ### 2. Action B
+      - Parameters or options.
+  - ## Troubleshooting
+    - *Error X:* solution.
+    - *Timeout:* adjust flags.
+  - ## Related
+    - [[Reference: CLI Options]]
+```
+
+**Tone:**
+
+* Imperative verbs.
+* Present tense, concise.
+
+---
+
+## 4. Reference Articles
+
+**Purpose:** Provide authoritative, fact-oriented descriptions.
+**Use Cases:** API schemas, config parameters, data models.
+**Tag:** `[[Diataxis/Reference]]`
+
+**Structure Template:**
+
+````markdown
+tags:: [[Tag]], [[Diataxis/Reference]]
+- # [Subject] Reference
+  - ## Overview
+    - Scope and applicability.
+  - ## Versioning
+    - Supported versions, compatibility.
+  - ## Structure/Schema
+    - Naming conventions, file formats.
+  - ## Fields/Parameters
+    - ### FieldA
+      - Type: string
+      - Required: true
+    - ### FieldB
+      - Type: integer
+      - Default: 100
+  - ## Examples
+    - ```json
+      { "fieldA":"value" }
+      ```
+  - ## See Also
+    - [[Explanation: Concept Explanation]]
+    - [[Tutorial: Example Tutorial]]
+````
+
+**Style:** Neutral, declarative; no instructional verbs.
+
+---
+
+## Editorial & QA Workflow
+
+1. **Select** the article type.
+2. **Draft** or merge frontmatter; append `[[Diataxis/...]]`.
+3. **Outline** sections per template.
+4. **Compose** in valid LFM.
+5. **Embed** code, YAML, JSON, and converted tables.
+6. **Validate**:
+
+   * Bullets and indentation.
+   * Heading vs indent level.
+   * Nested code fences.
+   * No horizontal rules or blank bullet lines.
+   * Tables properly converted.
+7. **Review** tone and terminology.
+8. **Cross-link** in `Related` sections.
+9. **Test** code logically or in sandbox.
+10. **Publish** when Logseq renders cleanly.
+
+---
+
+**Common Pitfalls & Fixes**
+
+* **tags::** inadvertently modified: only append.
+* **Blank lines:** remove between bullets.
+* **Numeric lists:** use bullet prefixes.
+* **Unnested code fences:** indent under bullets.
+* **Lingering separators:** remove `---`.
+* **Misaligned headings:** adjust `#` level.
+* **Unconverted tables:** apply label\:value bullets.
+
+Use this prompt to generate a complete, polished, single Diataxis article in valid LFM.
