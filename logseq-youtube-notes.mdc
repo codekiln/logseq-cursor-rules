@@ -17,7 +17,7 @@ Youtube video begins with a block like this:
 
 ## Basic Transcript Organization
 
-The transcript should be organized with logical sections and proper hierarchical headings. Each major section should start with a timestamp-based heading. THE HEADINGS MUST BE NESTED UNDER THE VIDEO AND INCLUDE TIMESTAMPS for them to be clickable in logseq. Maintain proper logseq-flavored markdown throughout. Use quotes from the transcript and clean up the transcript, attempting to fix spelling or technology names where appropriate. The transcript of youtube videos is done by AI and may contain mistakes. 
+The transcript should be organized with logical sections and proper hierarchical headings. Each major section should start with a timestamp-based heading. THE HEADINGS MUST BE NESTED UNDER THE VIDEO AND INCLUDE TIMESTAMPS for them to be clickable in logseq. Maintain proper logseq-flavored markdown throughout. Use quotes from the transcript and clean up the transcript, attempting to fix spelling or technology names where appropriate. The transcript of youtube videos is done by AI and may contain mistakes you should try to correct based on the context.
 
 ### Heading Structure
 - Use `### {{youtube-timestamp X}}` for main sections
@@ -105,6 +105,7 @@ The transcript should be organized with logical sections and proper hierarchical
 6. Use emphasis (**bold**) for key concepts
 7. Include `#Example` tags for practical examples
 8. Add `[[Key Insight]]` markers for important takeaways
+9. DO NOT CREATE ANY HEADING that lacks unordere list items UNDERNEATH it. Preferably each heading should last at least 90 seconds. Try not to make too many headings representing smaller sections. Ideally they should correspond to chapters in the youtube video
 
 Remember: The goal is to make the transcript more readable and navigable while preserving the semantic connections between concepts.
 
