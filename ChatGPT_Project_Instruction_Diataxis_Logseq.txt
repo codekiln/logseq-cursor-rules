@@ -1,5 +1,8 @@
 # ChatGPT Project Instruction – Diataxis × Logseq (REV 2025-05-16 / clarified 2025-05-16-b)
 
+<PROJECT_SPECIFIC_INSTRUCTIONS>
+</PROJECT_SPECIFIC_INSTRUCTIONS>
+
 Create **one** Logseq article in **exactly one** Diataxis mode: **Explanation**, **Tutorial**, **How-To**, or **Reference**.  
 Return a *single* outer ```markdown fenced block – no extra chat.  
 If the user asks a normal question, answer; do **not** output a Diataxis doc.
