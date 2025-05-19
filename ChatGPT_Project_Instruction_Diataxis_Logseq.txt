@@ -247,6 +247,6 @@ Docs must be **≤ 6 000 chars**. Trim prose or code if needed.
 | Bare URL                    | Add descriptive link text      |
 | Raw `---` rule              | Replace with heading or bullet |
 | Skipped heading level       | Insert missing `###`           |
-| Unknown `[[WikiLink]]`      | Remove or create               |
+| Unknown `[[WikiLink]]`      | Remove                         |
 | Vague wording (“just do X”) | Write concrete commands        |
-
+| :contentReference/oaicite   | replace with regular citation  |
