@@ -22,6 +22,11 @@ alwaysApply: false
 - in particular, note the links to the next and previous day in the header, *particularly at d1 and d7* since those will reference the previous and next week, respectively. Also, note the relationship between the day files and the week files. 
 - "up" in the page properties refers to the page "up" in the logseq namespace. 
   - for example, [[2025/t1/w07]] is "up" from [[2025/t1/w07/Todos]] 
+- **Special note for trimester boundaries:**
+  - Trimester 1: Jan 1 to the day before Memorial Day
+  - Trimester 2: Memorial Day to the day before Labor Day
+  - Trimester 3: Labor Day to Dec 31
+  - When a week is at the end or beginning of a trimester, the `prev` and `next` links in the week and day pages should point to the last week of the previous trimester or the first week of the next trimester, respectively. For example, the week before Memorial Day (end of T1) should have its `next` link point to the first week of T2, and the week before Labor Day (end of T2) should have its `next` link point to the first week of T3. Similarly, the first week of a trimester should have its `prev` link point to the last week of the previous trimester.
 
 # Individual 
 - the `up:: ` page-level attribute should always point up to the next level up in the logseq hierarchy. So if we are in a page [[A/B/C]], it should be `up:: [[A/B]]`. Remember here that the logseq slashes translate to triple underscores in the filename. so `pages/A___B___C.md` would have `up:: [[A/B]]` in its logseq frontmatter
@@ -52,6 +57,7 @@ week-todos:: [[2025/t1/w14/Todos]]
 ~~~
 
 In the example day page above, the agenda, weather and schedule should ONLY be filled in if there is anything filled in under that day under "- ## Week Days" in the week page.
+- **If there is no agenda or weather for a given day in the week overview page (under '- ## Week Days - (logseq-garden ONLY)'), then nothing needs to be propagated to the content inside individual day pages for that day except for the heading and page properties as indicated below.**
 
 Example for todos pages in w08 (this example is for day 2 of that week at [[2025/t1/w14/d2/Todos]]; note that the `up:: ` link points to the equivalent day as above):
 ~~~
